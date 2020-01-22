@@ -26,7 +26,7 @@ body {
     <script type="text/javascript">
         document.getElementById('btn').onclick = function() {
             var val = document.getElementById('imagename').value,
-                src = 'http://webpage.com/images/' + val +'.png',
+                src = val ,
                 img = document.createElement('img');
 
             img.src = src;
