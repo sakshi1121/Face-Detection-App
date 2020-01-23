@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image</title>
+	<style>
+        input[type="button"]{
+            text-align: center;
+            color: black;
+            padding: 12px 20px;
+            display: inline-block;
+            font-size: 16px;
+            transition-duration: .4s;
+            cursor: pointer;
+            border: 2px solid #e7e7e7;
+            margin: auto
+        }
+        input[type="button"]:hover {
+            background-color: #e7e7e7;
+        }
+        input[type="url"]{
+            align-self: center;
+            padding: 12px 20px;
+            margin: : auto;
+            box-sizing: border-box;
+            border: 3px solid #ccc;
+            transition: 0.5s;
+        }
+        input[type="url"]:focus{
+            border: 3px solid #555;
+        }
+    </style>
+</head>
+<body>
+	<form">
+		<input type="url" id = "ip" name="Enter URL of image">
+		<input type = "button" id = "hello" value = "Detect"> 		
+	</form>
+	
+	<script>
+		document.getElementById('hello').onclick = function() {
+            var val = document.getElementById('ip').value,
+            img = document.createElement('img');
+            img.src = val;
+            document.body.appendChild(img);
+         }
+	</script>
+
+</body>
+</html>
