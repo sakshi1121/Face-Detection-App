@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Face Detection</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="custom.css">
+    <script src="bootstrap.min.js"></script>
+</head>
+<body>
+<div class="main_body">
+<div class="d-flex justify-content-center align-items-center container ">
+        <form class="form-inline">
+            <div class="form-group">
+                <input size="50" type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Image Link">
+                <div id = "buttons">
+                    <button type="button" onclick="Display()" class="btn btn-success">Submit</button>
+                    <button type="button" onclick="Delete()" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </form>
+
+</div>
+<div class="d-flex justify-content-center align-items-center image_container ">
+    <img class = "img-responsive img-fluid" id ="image" src="" >
+</div>
+</div>
+<script>
+   function Display(){
+
+        var y  = document.getElementById("image");
+        var x = document.getElementById("exampleFormControlInput1").value;
+        if(x === "") {
+            y.style.display = "none";
+        }else {
+            y.style.display = "block";
+        }
+       document.getElementById("image").src = x;
+   }
+    function Delete() {
+        var y  = document.getElementById("image");
+       document.getElementById("image").src= "";
+       document.getElementById("exampleFormControlInput1").value= "";
+        y.style.display = "none";
+    }
+</script>
+</body>
+</html>

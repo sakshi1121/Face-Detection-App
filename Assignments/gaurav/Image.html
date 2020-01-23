@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <title>
+        Image
+    </title>
+    <style>
+    #IMG{
+        top: 20%;
+        height: 50%;
+        width: 25%;
+    }
+    #stuff{
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #2f3640;
+        height: 40px;
+        border-radius: 40px;
+        padding: 10px;
+    }
+    body{
+        background-color: #001f3f;
+    }
+    #stuff:hover > #URL {
+ width: 240px;
+ padding: 6px;
+}
+#stuff:hover > .searchBtn {
+ background: white;
+ color: black;
+}
+.searchBtn {
+ color: #e84118;
+ float: right;
+ width: 40px;
+ height: 40px;
+ border-radius: 50%;
+ background: #2f3640;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transition: 0.4s;
+ color: white;
+ cursor: pointer;
+}
+.searchBtn > i {
+ font-size: 30px;
+}
+#URL {
+ border: none;
+ background: none;
+ outline: none;
+ float: left;
+ padding: 0;
+ color: white;
+ font-size: 16px;
+ transition: 0.4s;
+ line-height: 40px;
+ width: 0px;
+ font-weight: bold;
+}
+    </style>
+    </head>
+
+<body>
+    
+        <center> <br>
+            <div id="stuff">
+        <input type="text" id="URL" placeholder="Enter image URL">
+        <button onclick="newElement()" class="searchBtn">Go</button>
+    </div><br><br><br><br><br><br>
+        <img id="IMG" >
+        <p id="imageinsert"></p></center>
+        <script>
+            function newElement() {
+                var imageurl = document.getElementById('URL').value;
+             document.getElementById("IMG").src = imageurl;
+            }
+        </script>
+    
+</body>
+
+</html>
